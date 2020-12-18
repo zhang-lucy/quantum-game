@@ -1,0 +1,4 @@
+name: qsharp-env
+dependencies:
+    qsharp
+    numpy
