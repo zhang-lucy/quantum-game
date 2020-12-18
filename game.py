@@ -52,7 +52,7 @@ class Game:
         self.deal_cards()
         
     def initialize_players(self):
-        score = 0
+        score = 50
         for name in self.player_names:
             player = Player(name)
             player.score = score
@@ -198,12 +198,13 @@ class Game:
                 player.update(update+update2)     
             
     def check_end_game(self):
-        return len(self.cards) == 0
+        # return len(self.cards) == 0
+        return any([player.score == 0 for player in self.players])
     
 class Player:
     def __init__(self, name):
         self.name = name
-        self.score = 0
+        self.score = 50
         self.cards = []
         
     def card_is_valid(self, card_selected):
