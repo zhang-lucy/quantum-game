@@ -1,0 +1,7 @@
+name: qsharp-env
+channels:
+  - defaults
+dependencies:
+  - notebook
+  - qsharp
+prefix: /usr/local/anaconda3/envs/qsharp-env
